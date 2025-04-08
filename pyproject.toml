@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sq_codec"
+dynamic = ["version"]
+dependencies = [
+    "torch>=2.0",
+    "local-attention",
+    "vector-quantize-pytorch",
+    "pydantic-settings",
+    "more_itertools"
+]
+requires-python = ">= 3.11"
+authors = [
+    { name = "Linwei Zhai", email = "zhai_lw@outlook.com" }
+]
+description = "SQCodec: A nerual audio codec with one quantizer"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E.*"]
+keywords = ['audio codec', 'artificial intelligence', 'deep learning', 'pytorch']
+classifiers = [
+    "Development Status :: 4 - Beta",
+    'Intended Audience :: Developers',
+    'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    'Programming Language :: Python'
+]
+
+[project.optional-dependencies]
+examples = ["librosa"]
+
+[project.urls]
+Documentation = "https://github.com/zhai-lw/SQCodec#readme"
+Repository = "https://github.com/zhai-lw/SQCodec.git"
+Issues = "https://github.com/zhai-lw/SQCodec/issues"
+DOWNLOAD = "https://huggingface.co/zhai-lw/SQCodec"
+
+[tool.hatch.version]
+path = "sq_codec/__about__.py"

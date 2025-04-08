@@ -1,0 +1,25 @@
+model_name = "3kbps"
+sample_rate = 16000
+model_version = "v0"
+
+#model_dir = "xxx/.cache/sq_codec"
+weight_url = "https://huggingface.co/zhai-lw/SQCodec/resolve/main/weights/3kbps.v0/{}.pt"
+
+[network_config]
+feature_dim = 256
+compress_rates = [6, 5, 3]
+encoder_dims = [24, 48, 96, 192]
+encoder_depths = [1, 1, 1, 2]
+decode_rates = [5, 3, 3, 2]
+decoder_dims = [384, 192, 96, 48, 24]
+decoder_depths = [3, 2, 2, 1, 1]
+base_unit = 'normal'
+use_norm = true
+use_snake_act = true
+decoder_last_layer = 'legacy'
+vq_config = { name = "taae_fsq", codebook_dim = [7, 7, 7, 7, 7, 7], codebook_num = 1 }
+en_coder_depth = 3
+en_coder_window_size = 400
+en_coder_dynamic_pos = true
+en_coder_compress_rate = 1
+en_coder_cache_size = 0
