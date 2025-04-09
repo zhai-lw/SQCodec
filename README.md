@@ -1,6 +1,7 @@
 # SQCodec
 
-This repository contains the implementation of SQCodec, a lightweight audio codec based on a single quantizer, introduced in the paper titled "One Quantizer is Enough: Toward a Lightweight Audio Codec".
+This repository contains the implementation of SQCodec, a lightweight audio codec based on a single quantizer,
+introduced in the paper titled "One Quantizer is Enough: Toward a Lightweight Audio Codec".
 
 [Paper](https://arxiv.org/abs/2504.04949)
 
@@ -61,3 +62,15 @@ with torch.inference_mode():
 mse = ((sample_audio - generated_audio) ** 2).mean().item()
 print(f"codec({MODEL_USED}) mse: {mse}")
 ```
+
+### available models
+
+| config_name  | Sample rate(Hz) | tokens/s | Codebook size | Bitrate(bps) |
+|--------------|-----------------|----------|---------------|--------------|
+| 0k75bps      | 16,000          | 44.44    | 117,649       | 748.6        |
+| 1k5bps       | 16,000          | 88.89    | 117,649       | 1497.3       |
+| 3kbps        | 16,000          | 177.78   | 117,649       | 2994.5       |
+| 6kbps        | 16,000          | 355.56   | 117,649       | 5989.0       |
+| 12kbps       | 16,000          | 666.67   | 250,047       | 11954.6      |
+| 12kbps_24khz | 24,000          | 666.67   | 250,047       | 11954.6      |
+| 24kbps_24khz | 24,000          | 1333.33  | 250,047       | 23909.1      |
