@@ -1,3 +1,5 @@
+# The new version can be found at [HERE](https://github.com/zhai-lw/L3AC)
+
 # SQCodec
 
 This repository contains the implementation of SQCodec, a lightweight audio codec based on a single quantizer,
@@ -74,3 +76,4 @@ print(f"codec({MODEL_USED}) mse: {mse}")
 | 12kbps       | 16,000          | 666.67   | 250,047       | 11954.6      |
 | 12kbps_24khz | 24,000          | 666.67   | 250,047       | 11954.6      |
 | 24kbps_24khz | 24,000          | 1333.33  | 250,047       | 23909.1      |
+](https://github.com/zhai-lw/L3AC)
